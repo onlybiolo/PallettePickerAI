@@ -1,13 +1,55 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>color-palette-generator</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta Tags -->
+  <title>Chromatic AI - Intelligent Color Palette Generator</title>
+  <meta name="title" content="Chromatic AI - Intelligent Color Palette Generator" />
+  <meta name="description"
+    content="Generate beautiful, AI-powered color palettes from your photos instantly. Extract dominant colors, copy HEX/RGB/HSL codes, and visualize them." />
+  <meta name="keywords"
+    content="color palette generator, ai color extractor, picking colors from image, design tool, hex codes, aesthetic palettes" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chromatic-ai.netlify.app/" />
+  <meta property="og:title" content="Chromatic AI - Intelligent Color Palette Generator" />
+  <meta property="og:description"
+    content="Generate beautiful, AI-powered color palettes from your photos instantly. Extract dominant colors, copy HEX/RGB/HSL codes, and visualize them." />
+  <meta property="og:image" content="https://chromatic-ai.netlify.app/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://chromatic-ai.netlify.app/" />
+  <meta property="twitter:title" content="Chromatic AI - Intelligent Color Palette Generator" />
+  <meta property="twitter:description"
+    content="Generate beautiful, AI-powered color palettes from your photos instantly. Extract dominant colors, copy HEX/RGB/HSL codes, and visualize them." />
+  <meta property="twitter:image" content="https://chromatic-ai.netlify.app/og-image.jpg" />
+
+  <!-- PWA & Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/logo192.png" />
+
+  <!-- Dark Mode Initial Check (Prevent FOUC) -->
+  <script>
+    (function () {
+      if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
